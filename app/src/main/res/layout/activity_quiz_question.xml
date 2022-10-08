@@ -4,6 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".QuizQuestionActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="20dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress_circle"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="132dp"
+                android:indeterminate="false"
+                android:max="10"
+                android:min="1"
+                android:progress="5"
+                app:indicatorSize="110dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:showAnimationBehavior="outward" />
+
+            <TextView
+                android:id="@+id/progress_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="35dp"
+                app:layout_constraintBottom_toBottomOf="@+id/progress_circle"
+                app:layout_constraintEnd_toEndOf="@+id/progress_circle"
+                app:layout_constraintStart_toStartOf="@+id/progress_circle"
+                app:layout_constraintTop_toTopOf="@+id/progress_circle" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
