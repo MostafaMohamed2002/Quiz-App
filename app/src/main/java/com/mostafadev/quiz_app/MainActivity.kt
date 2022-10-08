@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity() {
             val usernametext=edittext_username.text.toString()
             if(usernametext.isNotEmpty()){
                 Toast.makeText(this, usernametext,Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, "Please enter your name",Toast.LENGTH_SHORT).show()
+
             }
         }
     }
