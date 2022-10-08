@@ -1,5 +1,6 @@
 package com.mostafadev.quiz_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -13,6 +14,9 @@ class MainActivity : AppCompatActivity() {
             val usernametext=edittext_username.text.toString()
             if(usernametext.isNotEmpty()){
                 Toast.makeText(this, usernametext,Toast.LENGTH_SHORT).show()
+                val quizQuestionActivity=Intent(this@MainActivity,QuizQuestionActivity::class.java)
+                startActivity(quizQuestionActivity)
+                    finish()
             }else{
                 Toast.makeText(this, "Please enter your name",Toast.LENGTH_SHORT).show()
 
