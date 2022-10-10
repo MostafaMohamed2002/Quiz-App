@@ -19,7 +19,7 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun setQuestion() {
         val questionList= getQuestions()
-        val currentPosistion =10
+        val currentPosistion =1
 
         val question=questionList[currentPosistion-1]
         progress_circle.progress=currentPosistion
@@ -61,7 +61,7 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
             option.typeface = Typeface.DEFAULT
             option.background = ContextCompat.getDrawable(
                 this@QuizQuestionActivity,
-                R.drawable.default_option_border_bg
+                R.drawable.selected_option_border_bg
             )
         }
     }
