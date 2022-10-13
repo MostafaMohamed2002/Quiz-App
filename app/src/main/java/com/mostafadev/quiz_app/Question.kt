@@ -19,7 +19,7 @@ fun getQuestions(): ArrayList<Question> {
         " 4 سنوات ",
         "5 سنوات",
         "6 سنوات",
-        3
+        4
     )
 
     val q2 = Question(
